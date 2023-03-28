@@ -1,11 +1,19 @@
+// Скетч для дозатора сайдекса
+
+// LCD дисплей - ардуино
+// SCL - A5
+// SOA - A4
+
+// Часы реального времени - ардуино
+// RST - 7
+// DAT - 6
+// CLK - 5
+
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 #include <iarduino_RTC.h>
 
-// Дисплей подключается к портам SCL - A5, SOA - A4
 LiquidCrystal_I2C lcd(0x3F,16,2);  
-
-// часы RST, CLK, DAT
 iarduino_RTC watch(RTC_DS1302, 7, 5, 6);
 
 //  Определяем системное время:                             // Время загрузки скетча.
